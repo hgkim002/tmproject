@@ -1,0 +1,159 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column; /* ✅ 배너와 이미지 섹션을 세로 정렬 */
+}
+
+.banner {
+  position: relative; /* 헤더가 위로 올라가도록 */
+  width: 100%; /* 전체 너비 */
+  height: auto; /* 전체 높이 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0; /* 여백 제거 */
+  padding: 0; /* 여백 제거 */
+  margin-bottom: clamp(5px, 3rem, 500px);
+}
+
+.bannerImage {
+  width: 100%; /* 전체 너비 */
+  height: 100%; /* 전체 높이 */
+  object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
+}
+
+.bannerText {
+  position: absolute;
+  z-index: 5;
+  color: white;
+  font-size: clamp(5rem, 6vw, 6rem);
+  bottom: clamp(10px, 5vh, 100px); /* 위치 조정 */
+  text-align: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+}
+/* 화살표 버튼 스타일 */
+.arrowIcon {
+  width: 2vw; /* 적절한 크기로 조절 */
+  height: auto; /* 정사각형으로 설정 */
+}
+
+.left {
+  left: 10vw;
+}
+
+.right {
+  right: 10vw;
+}
+
+/* 이미지 세션 추가  */
+
+.gifSection {
+  text-align: center;
+  font-size: clamp(24px, 5vw, 50px);
+  padding: 1vh; /*기존 20px에서 10px로 줄이기*/
+  /* margin-top: 3vh; */
+  margin-bottom: clamp(5px, 1.5rem, 500px);
+}
+
+.gifSection .imageItem {
+  width: 50vw; /* 기존보다 키우기 */
+  max-width: 600px; /* 반응형 조정 */
+  height: auto;
+  object-fit: cover;
+}
+
+.giffullSection {
+  width: 100vw; /* 가로 전체 채우기 */
+  height: 70vh; /* 원하는 높이 설정 (조절 가능) */
+  overflow: hidden; /* 넘치는 부분 잘라내기 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagegifItem {
+  width: 100vw; /* 가로를 화면에 꽉 채우기 */
+  height: auto; /* 비율 유지 */
+  object-fit: cover; /* 위아래 잘라내면서 꽉 채우기 */
+}
+
+.imageSection {
+  text-align: center;
+}
+
+.imageSection h3 {
+  margin-top: clamp(10px, 10%, 30px);
+  font-size: clamp(18px, 2.5vw, 32px); /* ✅ 최소 18px, 기본 2.5vw, 최대 32px */
+  margin-bottom: clamp(10px, 10vh, 30px); /* ✅ 글씨와 이미지 사이 간격 추가 */
+}
+
+.imageList {
+  display: flex;
+  gap: clamp(10px, 1rem, 30px);
+  justify-content: center;
+}
+
+.imageItem {
+  position: relative; /* 내부 요소 위치 지정 가능하도록 설정 */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  max-width: 500px;
+  display: block; /* ✅ 인라인 요소 문제 해결 */
+}
+
+.imageItem:hover {
+  transform: scale(1.1);
+}
+
+.imageContainer {
+  position: relative;
+  cursor: pointer;
+  width: clamp(200px, 30vw, 400px); /* ✅ 최대 크기 제한 */
+  height: auto;
+  margin-bottom: 100px;
+}
+
+/* 개별적으로 hover 적용 */
+.imageContainer:hover .imageItem {
+  transform: scale(1.1);
+}
+
+/* "자세히 보기" 텍스트 */
+/* "자세히 보기" 반응형 */
+.hoverText {
+  position: absolute;
+  bottom: clamp(10px, 5%, 30px); /* ✅ 화면 크기에 따라 위치 조정 */
+  left: 50%;
+  transform: translateX(-50%); /* ✅ 중앙 정렬 */
+  background: transparent;
+  color: black;
+  padding: clamp(4px, 0.5vw, 8px); /* ✅ 반응형 패딩 */
+  border-radius: 5px;
+  font-size: clamp(10px, 1vw, 18px); /* ✅ 반응형 글씨 크기 */
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* "자세히 보기" 위치 문제 해결 */
+.imageContainer {
+  position: relative;
+  cursor: pointer;
+  width: clamp(200px, 30vw, 400px); /* ✅ 반응형 이미지 크기 조절 */
+  height: auto;
+}
+
+.imageContainer:hover .hoverText {
+  opacity: 1;
+}

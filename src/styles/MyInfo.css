@@ -1,0 +1,125 @@
+* {
+  font-size: 15px;
+}
+/* ==================================================== */
+/* 공통 */
+.myinfos {
+  width: 1200px;
+  height: 100vh;
+  /* background: pink; */
+  display: flex;
+  margin: auto;
+}
+
+.infoleft,
+.inforight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  /* background-color: white; */
+  /* border: 1px solid gray; */
+}
+.left-block,
+.left-block2,
+.right-block {
+  margin: 10px;
+  padding: 10px;
+}
+button {
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+/* ==================================================== */
+/* LEFT */
+
+#profile-img {
+  border: 1px solid gray;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+  max-width: 100%; /* 이미지 크기를 부모에 맞춤 */
+  max-height: 100%; /* 이미지가 넘치지 않도록 */
+}
+.infoleft {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.left-block {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-block2 {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 좌우정렬 */
+  text-align: center;
+  justify-content: center; /* 상하정렬 */
+}
+.left-block > div {
+  margin-bottom: 5px;
+}
+
+.left-block2 > div {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+/* ==================================================== */
+/* RIGHT */
+.inforight {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right-block {
+  height: 100vh;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.right-block > div > img {
+  width: 20px;
+}
+.right-block div {
+  width: 500px;
+  height: 50px;
+  padding: 0 30px 0 30px;
+  line-height: 50px;
+  border: 1px solid rgb(150, 150, 150);
+}
+
+.info-title {
+  height: 100px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(200, 200, 200);
+}
+.purchaselist {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}

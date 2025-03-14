@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.join-container {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.join {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  height: 100vh;
+  padding-top: 50px;
+  margin: auto;
+}
+.join-form {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info {
+  width: 400px;
+  padding-bottom: 30px;
+  /* border: 1px solid rgb(200, 200, 200); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-info > p {
+  margin: 20px;
+}
+
+.join-form > img {
+  width: 200px;
+}
+.join-form > div {
+  margin-bottom: 10px;
+}
+.join-form > input {
+  margin-bottom: 5px;
+}
+
+.agree {
+  width: 400px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.joinBtn {
+  background-color: rgb(13, 100, 167);
+  color: white;
+  font-weight: bold;
+}
+
+.tos {
+  padding: 20px;
+}
+
+.tos > label {
+  display: flex;
+  align-items: center; /* 수직 정렬 유지 */
+  gap: 10px; /* 체크박스와 텍스트 사이 간격 조정 */
+}
+
+.tos > label > input {
+  width: 20px;
+  height: 20px;
+  line-height: center;
+}
+
+.tos > label > b {
+  font-size: 18px;
+  padding: 10px;
+}

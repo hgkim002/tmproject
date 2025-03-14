@@ -1,0 +1,84 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.transparent,
+.whiteBackground {
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: clamp(5vh, 8vh, 200px);
+  display: flex;
+  padding: clamp(1px, 0vh, 30px) 10px;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.transparent .navItem {
+  color: white;
+}
+
+.whiteBackground {
+  background-color: white;
+}
+
+.whiteBackground .navItem {
+  color: black;
+}
+
+.header .logo {
+  z-index: 100;
+  padding: 10px 20px;
+}
+
+.logo a {
+  float: left;
+  position: fixed;
+  left: 1%;
+  top: 2vh;
+}
+
+.logo img {
+  width: 10%;
+  height: auto;
+  max-width: 20%;
+}
+
+.navMenu {
+  display: flex;
+  flex-wrap: nowrap; /* JSY추가 */
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(10px, 2vw, 40px);
+}
+
+.navItem {
+  font-size: clamp(10px, 1.5vw, 24px);
+  font-family: "pretendard";
+  flex-wrap: nowrap; /* JSY추가 */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.2s;
+  z-index: 10;
+}
+
+/* ✅ 배경색에 따라 글씨 색 변경 */
+.lightText {
+  color: white; /* 메인 페이지에서 흰색 */
+}
+
+.darkText {
+  color: black; /* 다른 페이지에서 검은색 */
+}
+
+.navItem:hover {
+  background-color: #f2f2f2;
+}
