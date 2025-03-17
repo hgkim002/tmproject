@@ -56,7 +56,7 @@ export default function Header({ isLogin, loginInfo, onLogout, onRequestPage, on
 
         {isLogin ? (
           <NavLink to='/category/PurchaseList' className='navItem'>
-            구매내역
+            구매목록
           </NavLink>
         ) : (
           <NavLink to='/login' className='navItem' onClick={() => alert('로그인이 필요합니다.')}>
