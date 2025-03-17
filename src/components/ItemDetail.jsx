@@ -69,7 +69,7 @@ export default function ItemDetail() {
     <div className="itembox">
       <div className="itemlist-child">
       <div>
-        <img src={src} className="itembox-imgdetail" />
+        <img src={ `${process.env.PUBLIC_URL}` + src} className="itembox-imgdetail" />
       </div>
       <div style={{ marginLeft: "20px" }}>
         <h4>{name}</h4><br />

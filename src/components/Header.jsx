@@ -13,12 +13,13 @@ export default function Header({ isLogin, loginInfo, onLogout, onRequestPage, on
       setHeaderClass('whiteBackground');
     }
   }, [location]);
-
+   
+  const imgLogo = process.env.PUBLIC_URL + "/images/02.png";
   return (
     <header className={`${headerClass}`}>
       <div className='logo'>
         <NavLink to='/'>
-          <img src='/images/02.png' alt='Logo' />
+          <img src={imgLogo} alt='Logo' />
         </NavLink>
       </div>
 
@@ -28,7 +29,7 @@ export default function Header({ isLogin, loginInfo, onLogout, onRequestPage, on
         </NavLink>
 
         <NavLink to='/category/eye' className='navItem'>
-          456
+          CLOTHES
         </NavLink>
         <NavLink to='/category/face' className='navItem'>
           Product
@@ -55,7 +56,7 @@ export default function Header({ isLogin, loginInfo, onLogout, onRequestPage, on
 
         {isLogin ? (
           <NavLink to='/category/PurchaseList' className='navItem'>
-            Purchase list
+            구매내역
           </NavLink>
         ) : (
           <NavLink to='/login' className='navItem' onClick={() => alert('로그인이 필요합니다.')}>

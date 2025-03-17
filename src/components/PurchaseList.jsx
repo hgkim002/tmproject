@@ -108,7 +108,7 @@ export default function PurchaseList () {
             <div >₩ {selectedProd.price}</div>
           </div>
 
-          <img className="PurchaseList-image" src={selectedProd.productImage} alt="Example" />
+          <img className="PurchaseList-image" src={`${process.env.PUBLIC_URL}` + selectedProd.productImage} alt="Example" />
           <div className="purchase-item-buttons">
 
             <button className="purchase-item-button"

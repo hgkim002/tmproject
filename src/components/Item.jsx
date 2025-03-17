@@ -33,7 +33,7 @@ export default function Item({ id, name, price, src, description }) {
         {/* <div onClick={()=>{ navigate(`/category/ItemDetail?id=${id}`); }}> */}
         <div onClick={ goDetail }>
           {/* <Link to={`/category/ItemDetail${id}`}> */}
-            <img src={src} className="itembox-imglist"/>
+            <img src={ `${process.env.PUBLIC_URL}` + src} className="itembox-imglist"/>
           {/* </Link> */}
           <h4>{name}</h4>
           <p>₩ {price.toLocaleString()}</p>

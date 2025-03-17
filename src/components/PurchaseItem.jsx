@@ -56,7 +56,7 @@ export default function PurchaseItem ({purchaseDt, prodctId, productName, price,
     <div className="PurchaseItem"  onClick={()=>{ if(decision=='N') runModal(); else runAlert(); }}>
       {/* <div>{new Date(purchaseDt).toLocaleDateString()}</div> */}
       <div className="purchase-date">{new Date(purchaseDt).toLocaleString()}</div>
-      <img className="PurchaseItem-image" src={productImage} alt="Example" />
+      <img className="PurchaseItem-image" src={`${process.env.PUBLIC_URL}` + productImage} alt="Example" />
       {/* <img className="PurchaseItem-image" src={require(`${productImage}`)} alt="Example" /> */}
       <div>{productName}</div>
       <div>{price} 원</div>
