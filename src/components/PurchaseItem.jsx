@@ -45,9 +45,6 @@ export default function PurchaseItem ({purchaseDt, prodctId, productName, price,
   } else {
     strConfirm = '배송완료';
   }
-  console.log('++++++++++');
-  console.log(productImage);
-
 
   return (
 

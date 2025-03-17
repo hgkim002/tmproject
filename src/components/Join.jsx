@@ -11,7 +11,7 @@ export default function Join({ onJoin }) {
   const [isOver14, setIsOver14] = useState(false);
 
   const logo = process.env.PUBLIC_URL + "/images/pngwing.com.png";
-
+console.log('Join.js');
   return (
     <div className="join-container">
       <div className="join">
