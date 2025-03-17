@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function MainDefault() {
   const navigate = useNavigate();
-  const images = ["../images/01.jpg", "../images/item01.jpg"];
+  const images = ["/images/01.jpg", "/images/item01.jpg"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
