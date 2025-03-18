@@ -7,7 +7,7 @@ export default function Header({ isLogin, loginInfo, onLogout, onRequestPage, on
   const [headerClass, setHeaderClass] = useState('transparent');
 
   useEffect(() => {
-    if (location.pathname === '/') {
+    if (location.pathname === process.env.PUBLIC_URL + '/') {
       setHeaderClass('transparent');
     } else {
       setHeaderClass('whiteBackground');
@@ -18,48 +18,48 @@ export default function Header({ isLogin, loginInfo, onLogout, onRequestPage, on
   return (
     <header className={`${headerClass}`}>
       <div className='logo'>
-        <NavLink to='/'>
+        <NavLink to={process.env.PUBLIC_URL}>
           <img src={imgLogo} alt='Logo' />
         </NavLink>
       </div>
 
       <nav className='navMenu'>
-        <NavLink to='/category/ItemList' className='navItem'>
+        <NavLink to={process.env.PUBLIC_URL + '/category/ItemList'} className='navItem'>
           SHOES
         </NavLink>
 
-        <NavLink to='/category/eye' className='navItem'>
+        <NavLink to={process.env.PUBLIC_URL + '/category/eye'} className='navItem'>
           CLOTHES
         </NavLink>
-        <NavLink to='/category/face' className='navItem'>
+        <NavLink to={process.env.PUBLIC_URL + '/category/face'} className='navItem'>
           Product
         </NavLink>
 
         {!isLogin ? (
-          <NavLink to='/login' className='navItem'>
+          <NavLink to={process.env.PUBLIC_URL + '/login'} className='navItem'>
             로그인
           </NavLink>
         ) : (
-          <NavLink to='/' className='navItem' onClick={() => onLogout()}>
+          <NavLink to={process.env.PUBLIC_URL + '/'} className='navItem' onClick={() => onLogout()}>
             로그아웃
           </NavLink>
         )}
         {isLogin ? (
-          <NavLink to='/myinfo' className='navItem'>
+          <NavLink to={process.env.PUBLIC_URL + '/myinfo'} className='navItem'>
             MyPage
           </NavLink>
         ) : (
-          <NavLink to='/login' className='navItem' onClick={() => alert('로그인이 필요합니다.')}>
+          <NavLink to={process.env.PUBLIC_URL + '/login'} className='navItem' onClick={() => alert('로그인이 필요합니다.')}>
             MyPage
           </NavLink>
         )}
 
         {isLogin ? (
-          <NavLink to='/category/PurchaseList' className='navItem'>
-            구매목록
+          <NavLink to={process.env.PUBLIC_URL + '/category/PurchaseList'} className='navItem'>
+            Purchase list
           </NavLink>
         ) : (
-          <NavLink to='/login' className='navItem' onClick={() => alert('로그인이 필요합니다.')}>
+          <NavLink to={process.env.PUBLIC_URL + '/login'} className='navItem' onClick={() => alert('로그인이 필요합니다.')}>
             Purchase list
           </NavLink>
         )}

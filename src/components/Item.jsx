@@ -20,7 +20,7 @@ export default function Item({ id, name, price, src, description }) {
     
 
     // navigate 호출 시 state에 데이터 전달
-    navigate('/category/ItemDetail', { state: choiceData });
+    navigate(process.env.PUBLIC_URL + '/category/ItemDetail', { state: choiceData });
   };
 
   // onClick={goDetail}

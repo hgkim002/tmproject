@@ -18,21 +18,21 @@ export default function Main({ onLoginSubmit, isLogin, loginInfo, onJoin, onDele
     <main className='mainContent'>
       <Routes>
         <Route path='/' element={<MainDefault />} />
-        <Route path='/tmproject' element={<MainDefault />} />
+        <Route path={process.env.PUBLIC_URL + '/'} element={<MainDefault />} />
       </Routes>
       <div className='mainDefault'>
         <Routes>
           {/* <Route path="/category/shoes" element={<Shoe />} /> */}
-          <Route path='/category/banner' element={<Banner />} />
-          <Route path='/product/ShoeGif' element={<ShoeGif />} />
+          <Route path={process.env.PUBLIC_URL + '/category/banner'} element={<Banner />} />
+          <Route path={process.env.PUBLIC_URL + '/product/ShoeGif'} element={<ShoeGif />} />
 
-          <Route path='/category/ItemList' element={<ItemList />} />
-          <Route path='/category/ItemDetail' element={<ItemDetail />} />
-          <Route path='/category/PurchaseList' element={<PurchaseList />} />
+          <Route path={process.env.PUBLIC_URL + '/category/ItemList'} element={<ItemList />} />
+          <Route path={process.env.PUBLIC_URL + '/category/ItemDetail'} element={<ItemDetail />} />
+          <Route path={process.env.PUBLIC_URL + '/category/PurchaseList'} element={<PurchaseList />} />
 
-          <Route path='/join' element={<Join onJoin={onJoin} />} />
-          <Route path='/login' element={<Login onLoginSubmit={onLoginSubmit} handleLogin={handleLogin} />} />
-          <Route path='/myinfo' element={<MyInfo onLoginSubmit={onLoginSubmit} onDelete={onDelete} isLogin={isLogin} loginInfo={loginInfo} />} />
+          <Route path={process.env.PUBLIC_URL + '/join'} element={<Join onJoin={onJoin} />} />
+          <Route path={process.env.PUBLIC_URL + '/login'} element={<Login onLoginSubmit={onLoginSubmit} handleLogin={handleLogin} />} />
+          <Route path={process.env.PUBLIC_URL + '/myinfo'} element={<MyInfo onLoginSubmit={onLoginSubmit} onDelete={onDelete} isLogin={isLogin} loginInfo={loginInfo} />} />
         </Routes>
       </div>
     </main>

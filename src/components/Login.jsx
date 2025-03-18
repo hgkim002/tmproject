@@ -66,7 +66,7 @@ export default function Login({ handleLogin }) {
           </li>
         </ul>
         <span>아직 회원이 아니신가요?</span>&nbsp;&nbsp;
-        <button className="JoinBtn" onClick={() => navigate("/join")}>
+        <button className="JoinBtn" onClick={() => navigate(`${process.env.PUBLIC_URL}` + "/join")}>
           회원가입
         </button>
       </div>

@@ -71,7 +71,7 @@ export default function MyInfo({
           </div>
 
           <div className="right-block">
-            <div className="info-title" onClick={() => navigate("/myinfodet")}>
+            <div className="info-title" onClick={() => navigate(process.env.PUBLIC_URL + "/myinfodet")}>
               주문내역
             </div>
             <div className="purchaselist">

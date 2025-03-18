@@ -56,7 +56,7 @@ export default function ItemDetail() {
   const [alertOpen, setAlertOpen] = useState(false);
   const closeAlert = () => {
     setAlertOpen(false);
-    navigate(process.env.PUBLIC_URL);
+    navigate(process.env.PUBLIC_URL + '/');
   };
   const openAlert = () => setAlertOpen(true);
 

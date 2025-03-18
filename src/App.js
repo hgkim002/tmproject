@@ -61,7 +61,7 @@ function App() {
       setIsLogin(false);
       setLoginInfo(""); // 로그인시 이부분을 얻어 가지고 있음.
       alert("회원가입 완료. 가입하신 아이디로 로그인하세요.");
-      navigate("/login");
+      navigate(process.env.PUBLIC_URL + "/login");
     }
   };
   // 회원탈퇴 : 로컬스토리지 모든 정보 초기화
@@ -71,7 +71,7 @@ function App() {
     setIsLogin(false);
     setLoginInfo("");
     alert("회원 탈퇴 되었습니다.");
-    navigate(process.env.PUBLIC_URL);
+    navigate(process.env.PUBLIC_URL + '/');
   };
 
   // 로그인 : 빈 값으로 로그인시도 또는 비회원 처리 로직
@@ -82,7 +82,7 @@ function App() {
       if (!userId.trim() || !userPw.trim()) {
         // if (typeof userData.id === 'undefined' || userData.id === null || userData.id.trim() === '' || typeof userData.pw === 'undefined' || userData.pw === null || userData.pw.trim() === '') {
         alert("ID, PW 입력하세요.");
-        navigate("/login");
+        navigate(process.env.PUBLIC_URL + "/login");
       } else if (userId === confirmId.id) {
         onLoginSubmit(userId, userPw);
         // alert(`handleLogin isLogin = ${isLogin}, loginInfo = ${loginInfo}`);
@@ -90,7 +90,7 @@ function App() {
       }
     } catch (e) {
       alert("회원가입 필요");
-      navigate("/join");
+      navigate(process.env.PUBLIC_URL + "/join");
       // alert('예외 발생. 메인 페이지로 이동합니다.');
       // navigate('/');
     }
@@ -116,12 +116,12 @@ function App() {
       sessionStorage.setItem("loginInfo", JSON.stringify(confirmId));
       // alert(`onLoginSubmit 로그인 성공  isLogin = ${isLogin}, loginInfo = ${loginInfo}`);
 
-      navigate(process.env.PUBLIC_URL);
+      navigate(process.env.PUBLIC_URL + '/');
     } else if (userId === confirmId.id && userPw !== confirmId.pw) {
       setIsLogin(false);
       setLoginInfo("");
       alert("로그인 실패");
-      navigate("/login");
+      navigate(process.env.PUBLIC_URL + "/login");
     }
   };
 
@@ -131,11 +131,11 @@ function App() {
     setIsLogin(false);
     setLoginInfo("");
     alert("로그아웃 되었습니다.");
-    navigate(process.env.PUBLIC_URL);
+    navigate(process.env.PUBLIC_URL + '/');
   };
 
   const onRequestPage = (url) => {
-    navigate(url);
+    navigate(process.env.PUBLIC_URL + url);
   };
 
   /* JSY ============================================== */

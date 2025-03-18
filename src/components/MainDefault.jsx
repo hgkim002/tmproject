@@ -33,7 +33,7 @@ export default function MainDefault() {
         <img
           src={images[currentIndex]}
           className="bannerImage"
-          onClick={() => navigate("/category/banner")}
+          onClick={() => navigate(process.env.PUBLIC_URL + "/category/banner")}
           alt="banner"
         />
         <div className="bannerText">Just Do It !</div>
@@ -65,7 +65,7 @@ export default function MainDefault() {
             src={img01}
             alt="item1"
             className="imageItem"
-            onClick={() => navigate("/product/ShoeGif")}
+            onClick={() => navigate(process.env.PUBLIC_URL + "/product/ShoeGif")}
           />
         </div>
       </section>
@@ -76,7 +76,7 @@ export default function MainDefault() {
             src={img02}
             alt="item1"
             className="imagegifItem"
-            onClick={() => navigate("/product/ShoeGif")}
+            onClick={() => navigate(process.env.PUBLIC_URL + "/product/ShoeGif")}
           />
         </div>
       </section>
@@ -86,21 +86,21 @@ export default function MainDefault() {
         <div className="imageList">
           <div
             className="imageContainer"
-            onClick={() => navigate("/product/item1")}
+            onClick={() => navigate(process.env.PUBLIC_URL + "/product/item1")}
           >
             <img src={bimg08} alt="item1" className="imageItem" />
             <span className="hoverText">자세히 보기</span>
           </div>
           <div
             className="imageContainer"
-            onClick={() => navigate("/product/item2")}
+            onClick={() => navigate(process.env.PUBLIC_URL + "/product/item2")}
           >
             <img src={bimg06} alt="item2" className="imageItem" />
             <span className="hoverText">자세히 보기</span>
           </div>
           <div
             className="imageContainer"
-            onClick={() => navigate("/product/item3")}
+            onClick={() => navigate(process.env.PUBLIC_URL + "/product/item3")}
           >
             <img src={bimg07} alt="item3" className="imageItem" />
             <span className="hoverText">자세히 보기</span>
